@@ -1,11 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
-source 'git@github.com:VibrentHealth/specs-ios.git'
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 def shared_pods
-    pod 'VHiOS_SharedUtilities', :path => '../'
-    pod 'PhoneNumberKit'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'SnapKit'
+    pod 'Alamofire'
 end
 
 def testing_pods
