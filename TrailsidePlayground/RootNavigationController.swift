@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootNavigationController.swift
 //  TrailsidePlayground
 //
 //  Created by Yuchen Nie on 4/6/19.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class RootNavigationController:UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
+        setViewControllers([ViewController()], animated: true)
     }
-
-
 }
-
