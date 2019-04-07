@@ -27,4 +27,17 @@ class HTTPWorker {
             }
         }
     }
+    
+    public func searchMovieDetails(movieId:String, completion:@escaping ((_ response:Data?) -> Void)) {
+        let searchParams:Parameters = ["id":movieId]
+        let searchURL = "\(baseURL)lookup"
+        Alamofire.request(searchURL, parameters: searchParams).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                completion(value)
+            case .failure:
+                completion(nil)
+            }
+        }
+    }
 }

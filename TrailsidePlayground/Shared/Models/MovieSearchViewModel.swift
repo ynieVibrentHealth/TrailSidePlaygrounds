@@ -16,9 +16,12 @@ struct MovieSearchViewModel {
     let imageURLString:String
     let id:String
     let contentInformation:String
-    var isFavorite:Bool
-    
-    init(title:String, director:String, year:String, description:String, imageURLString:String, trackId:String, contentInformation:String, isFavorite:Bool) {
+    let isFavorite:Bool
+    let rentHD:String
+    let rentSD:String
+    let buyHD:String
+    let buySD:String
+    init(title:String, director:String, year:String, description:String, imageURLString:String, trackId:String, contentInformation:String, isFavorite:Bool, rentHD:String, rentSD:String, buyHD:String, buySD:String) {
         self.title = title
         self.director = director
         self.year = year
@@ -27,5 +30,9 @@ struct MovieSearchViewModel {
         self.isFavorite = isFavorite
         self.id = trackId
         self.contentInformation = contentInformation
+        self.rentHD = rentHD
+        self.rentSD = rentSD
+        self.buyHD = buyHD
+        self.buySD = buySD
     }
 }

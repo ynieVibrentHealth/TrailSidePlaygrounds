@@ -13,7 +13,6 @@ class MovieDescriptionView:UIView {
     
     fileprivate lazy var descriptionLabel:UILabel = {
         let label = UILabel()
-        label.numberOfLines = 7
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .black
         self.addSubview(label)
@@ -27,7 +26,8 @@ class MovieDescriptionView:UIView {
         return view
     }()
     
-    public func configure(with viewModel:MovieSearchViewModel) {
+    public func configure(with viewModel:MovieSearchViewModel, numberOfLinesLimit:Int = 7) {
+        self.descriptionLabel.numberOfLines = numberOfLinesLimit
         self.descriptionLabel.text = viewModel.description
     }
     

@@ -27,11 +27,10 @@ class MovieSearchView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .white
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
         tableView.register(MovieSearchResultCell.self, forCellReuseIdentifier: MovieSearchResultCell.REUSE_ID)
         self.view.addSubview(tableView)
         return tableView
@@ -125,9 +124,15 @@ extension MovieSearchView:UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieSearchResultCell.REUSE_ID, for: indexPath) as? MovieSearchResultCell else {return UITableViewCell()}
-        let movie = movies[indexPath.row]
-        cell.configure(with: movie)
+        let movieViewModel = movies[indexPath.row]
+        cell.configure(with: movieViewModel)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let movieViewModel = movies[indexPath.row]
+        router?.navigate(to: .MovieDetails(movieViewModel: movieViewModel))
     }
 }
 

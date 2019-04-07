@@ -9,7 +9,7 @@
 import Foundation
 
 enum MovieSearchDestination {
-    
+    case MovieDetails(movieViewModel:MovieSearchViewModel)
 }
 
 class MovieSearchRouter {
@@ -19,7 +19,12 @@ class MovieSearchRouter {
         self.view = movieSearchView
     }
     
-    public func navigat(to destination:MovieSearchDestination) {
-        
+    public func navigate(to destination:MovieSearchDestination) {
+        switch destination {
+        case .MovieDetails(let movieViewModel):
+            let detailsView = MovieDetailView()
+            MovieDetailConfigurator.instance.configure(with: detailsView, movieViewModel: movieViewModel)
+            view.navigationController?.pushViewController(detailsView, animated: true)
+        }
     }
 }
