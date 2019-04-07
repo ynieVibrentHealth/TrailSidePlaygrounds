@@ -37,7 +37,12 @@ class MovieSearchPresenter:MovieSearchPresenterInput {
     }
     
     private func handle(_ error:MovieSearchModel.MovieSearchError) {
-        
+        switch error {
+        case .CorruptedData:
+            output?.display(.Error(errorString: "We were unable to process the data, please try again later!"))
+        case .UnableToRetrieveData:
+            output?.display(.Error(errorString: "We were unable to retrieve the data, please try again later!"))
+        }
     }
     
     private func generateViewModels(with resultDTO:MovieSearchResultDTO) {

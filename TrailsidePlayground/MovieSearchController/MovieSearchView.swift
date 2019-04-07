@@ -48,6 +48,14 @@ class MovieSearchView: UIViewController {
         return searchbar
     }()
     
+    fileprivate lazy var loadingIndicator:LoadingIndicator = {
+        let loading = LoadingIndicator()
+        loading.loadActivity()
+        loading.isHidden = true
+        self.view.addSubview(loading)
+        return loading
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -62,25 +70,37 @@ class MovieSearchView: UIViewController {
         }
         
         tableView.snp.updateConstraints { (make) in
-            make.leading.trailing.bottom.equalTo(self.view)
+            make.leading.trailing.bottom.equalTo(self.view).priority(999)
+            make.bottom.equalTo(self.view).inset(view.safeAreaInsets.bottom)
             make.top.equalTo(searchbar.snp.bottom)
+        }
+        
+        loadingIndicator.snp.updateConstraints { (make) in
+            make.edges.equalTo(tableView).priority(999)
         }
     }
     
     private func refresh() {
-        
+        self.searchbar.text = ""
+        self.loadingIndicator.isHidden = true
+        movies = []
+        tableView.reloadData()
     }
 }
 
-extension MovieSearchView: MovieSearchViewInput {
+extension MovieSearchView: MovieSearchViewInput, ViewControllerShowsError {
     func display(_ state: MovieSearchModel.Function.State) {
-        switch state {
-        case .MovieResults(let movies):
-            self.movies = movies
-            tableView.reloadData()
-        case .Error(let errorString):
-            break
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingIndicator.isHidden = true
+            switch state {
+            case .MovieResults(let movies):
+                self?.movies = movies
+                self?.tableView.reloadData()
+            case .Error(let errorString):
+                self?.showError(with: errorString)
+            }
         }
+        
     }
 }
 
@@ -101,15 +121,16 @@ extension MovieSearchView:UITableViewDataSource, UITableViewDelegate {
 extension MovieSearchView:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.isEmpty {
-           output?.handle(.SearchMovie(searchTerm: searchText))
+            self.loadingIndicator.isHidden = false
+            view.bringSubviewToFront(loadingIndicator)
+            output?.handle(.SearchMovie(searchTerm: searchText))
         } else {
             refresh()
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        movies = []
-        tableView.reloadData()
+        refresh()
     }
 }
+

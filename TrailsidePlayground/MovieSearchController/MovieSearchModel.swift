@@ -28,7 +28,6 @@ struct MovieSearchModel {
     }
     
     enum MovieSearchError:Error {
-        case NetworkRequest
         case CorruptedData
         case UnableToRetrieveData
     }

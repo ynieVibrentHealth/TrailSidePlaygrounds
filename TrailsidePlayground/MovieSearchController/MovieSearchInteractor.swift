@@ -39,10 +39,6 @@ class MovieSearchInteractor:MovieSearchInteractorInput {
         }
     }
     
-    private func buildSearchTerm(with rawText:String) {
-        
-    }
-    
     private func sendError(with error:MovieSearchModel.MovieSearchError) {
         output?.process(.SearchError(error:error))
     }

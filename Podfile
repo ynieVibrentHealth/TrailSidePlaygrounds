@@ -5,6 +5,7 @@ use_frameworks!
 
 def shared_pods
     pod 'RxSwift'
+    pod 'RxCocoa'
     pod 'SnapKit'
     pod 'Alamofire'
     pod 'Kingfisher'
