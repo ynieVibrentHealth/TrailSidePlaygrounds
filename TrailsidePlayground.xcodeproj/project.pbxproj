@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4CB687F522596D16007C1D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB687F422596D16007C1D86 /* AppDelegate.swift */; };
-		4CB687F722596D16007C1D86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB687F622596D16007C1D86 /* ViewController.swift */; };
 		4CB687FC22596D17007C1D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB687FB22596D17007C1D86 /* Assets.xcassets */; };
 		4CB687FF22596D17007C1D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB687FD22596D17007C1D86 /* LaunchScreen.storyboard */; };
 		4CB6880A22596D17007C1D86 /* TrailsidePlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6880922596D17007C1D86 /* TrailsidePlaygroundTests.swift */; };
 		4CB6881522596D17007C1D86 /* TrailsidePlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6881422596D17007C1D86 /* TrailsidePlaygroundUITests.swift */; };
 		4CB6882522596E9B007C1D86 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6882422596E9B007C1D86 /* RootNavigationController.swift */; };
+		4CBBAE4B225A706700EBBC21 /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE4A225A706700EBBC21 /* MovieSearchView.swift */; };
+		4CBBAE4D225A707500EBBC21 /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE4C225A707500EBBC21 /* MovieSearchInteractor.swift */; };
+		4CBBAE4F225A707F00EBBC21 /* MovieSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE4E225A707F00EBBC21 /* MovieSearchPresenter.swift */; };
+		4CBBAE51225A708A00EBBC21 /* MovieSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE50225A708A00EBBC21 /* MovieSearchModel.swift */; };
+		4CBBAE53225A709700EBBC21 /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE52225A709700EBBC21 /* MovieSearchViewModel.swift */; };
+		4CBBAE55225A70BA00EBBC21 /* MovieSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE54225A70BA00EBBC21 /* MovieSearchConfigurator.swift */; };
+		4CBBAE58225A72B200EBBC21 /* MovieSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE57225A72B200EBBC21 /* MovieSearchResultCell.swift */; };
+		4CBBAE5A225A757800EBBC21 /* MovieSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE59225A757800EBBC21 /* MovieSearchRouter.swift */; };
 		611E5EE66D06AD0AEF279BBB /* Pods_TrailsidePlaygroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1153869D956FBC1A9C1E17 /* Pods_TrailsidePlaygroundUITests.framework */; };
 		FAFD94467B5149E0541C6F28 /* Pods_TrailsidePlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFACD41B0F075496A4C0982 /* Pods_TrailsidePlaygroundTests.framework */; };
 		FC9BFD77EDB79597339EB781 /* Pods_TrailsidePlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C2FA66DB660230670A3F72 /* Pods_TrailsidePlayground.framework */; };
@@ -41,7 +48,6 @@
 		2C1153869D956FBC1A9C1E17 /* Pods_TrailsidePlaygroundUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailsidePlaygroundUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB687F122596D16007C1D86 /* TrailsidePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailsidePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB687F422596D16007C1D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CB687F622596D16007C1D86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CB687FB22596D17007C1D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB687FE22596D17007C1D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CB6880022596D17007C1D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +58,14 @@
 		4CB6881422596D17007C1D86 /* TrailsidePlaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsidePlaygroundUITests.swift; sourceTree = "<group>"; };
 		4CB6881622596D17007C1D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CB6882422596E9B007C1D86 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		4CBBAE4A225A706700EBBC21 /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
+		4CBBAE4C225A707500EBBC21 /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
+		4CBBAE4E225A707F00EBBC21 /* MovieSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchPresenter.swift; sourceTree = "<group>"; };
+		4CBBAE50225A708A00EBBC21 /* MovieSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchModel.swift; sourceTree = "<group>"; };
+		4CBBAE52225A709700EBBC21 /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
+		4CBBAE54225A70BA00EBBC21 /* MovieSearchConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchConfigurator.swift; sourceTree = "<group>"; };
+		4CBBAE57225A72B200EBBC21 /* MovieSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResultCell.swift; sourceTree = "<group>"; };
+		4CBBAE59225A757800EBBC21 /* MovieSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchRouter.swift; sourceTree = "<group>"; };
 		4FFACD41B0F075496A4C0982 /* Pods_TrailsidePlaygroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailsidePlaygroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674EFAE33B9F7F38E553843B /* Pods-TrailsidePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-TrailsidePlaygroundTests/Pods-TrailsidePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		727766B4C1AEFF628FC855B5 /* Pods-TrailsidePlaygroundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlaygroundUITests.release.xcconfig"; path = "Target Support Files/Pods-TrailsidePlaygroundUITests/Pods-TrailsidePlaygroundUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,10 +141,10 @@
 		4CB687F322596D16007C1D86 /* TrailsidePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4CBBAE49225A703600EBBC21 /* MovieSearchController */,
 				4CB6882622596FAF007C1D86 /* Resources */,
 				4CB6882222596E84007C1D86 /* Test */,
 				4CB687F422596D16007C1D86 /* AppDelegate.swift */,
-				4CB687F622596D16007C1D86 /* ViewController.swift */,
 				4CB6882422596E9B007C1D86 /* RootNavigationController.swift */,
 			);
 			path = TrailsidePlayground;
@@ -169,6 +183,29 @@
 				4CB687FD22596D17007C1D86 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4CBBAE49225A703600EBBC21 /* MovieSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBAE56225A726800EBBC21 /* Subviews */,
+				4CBBAE4A225A706700EBBC21 /* MovieSearchView.swift */,
+				4CBBAE4C225A707500EBBC21 /* MovieSearchInteractor.swift */,
+				4CBBAE4E225A707F00EBBC21 /* MovieSearchPresenter.swift */,
+				4CBBAE50225A708A00EBBC21 /* MovieSearchModel.swift */,
+				4CBBAE52225A709700EBBC21 /* MovieSearchViewModel.swift */,
+				4CBBAE54225A70BA00EBBC21 /* MovieSearchConfigurator.swift */,
+				4CBBAE59225A757800EBBC21 /* MovieSearchRouter.swift */,
+			);
+			path = MovieSearchController;
+			sourceTree = "<group>";
+		};
+		4CBBAE56225A726800EBBC21 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBAE57225A72B200EBBC21 /* MovieSearchResultCell.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		D476CBA6DF55162A1CA75F44 /* Frameworks */ = {
@@ -437,9 +474,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CB687F722596D16007C1D86 /* ViewController.swift in Sources */,
+				4CBBAE4F225A707F00EBBC21 /* MovieSearchPresenter.swift in Sources */,
+				4CBBAE4D225A707500EBBC21 /* MovieSearchInteractor.swift in Sources */,
+				4CBBAE4B225A706700EBBC21 /* MovieSearchView.swift in Sources */,
+				4CBBAE5A225A757800EBBC21 /* MovieSearchRouter.swift in Sources */,
 				4CB687F522596D16007C1D86 /* AppDelegate.swift in Sources */,
+				4CBBAE51225A708A00EBBC21 /* MovieSearchModel.swift in Sources */,
 				4CB6882522596E9B007C1D86 /* RootNavigationController.swift in Sources */,
+				4CBBAE55225A70BA00EBBC21 /* MovieSearchConfigurator.swift in Sources */,
+				4CBBAE53225A709700EBBC21 /* MovieSearchViewModel.swift in Sources */,
+				4CBBAE58225A72B200EBBC21 /* MovieSearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +652,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrailsidePlayground/Info.plist;
+				INFOPLIST_FILE = TrailsidePlayground/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,7 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrailsidePlayground/Info.plist;
+				INFOPLIST_FILE = TrailsidePlayground/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
