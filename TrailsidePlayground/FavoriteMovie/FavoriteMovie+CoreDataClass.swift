@@ -1,13 +1,16 @@
 //
-//  MovieSearchViewModel.swift
+//  FavoriteMovie+CoreDataClass.swift
 //  TrailsidePlayground
 //
 //  Created by Yuchen Nie on 4/7/19.
 //  Copyright © 2019 Yuchen Nie. All rights reserved.
 //
+//
 
 import Foundation
+import CoreData
 
-struct MovieSearchViewModel {
-    
+@objc(FavoriteMovie)
+public class FavoriteMovie: NSManagedObject {
+
 }

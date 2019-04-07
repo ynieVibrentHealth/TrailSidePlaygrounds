@@ -9,7 +9,6 @@
 import UIKit
 import SnapKit
 import RxSwift
-import RxCocoa
 
 protocol MovieSearchViewInput {
     func display(_ state:MovieSearchModel.Function.State)
@@ -51,6 +50,8 @@ class MovieSearchView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        title = "Search iTunes Movies"
+        edgesForExtendedLayout = []
     }
     
     override func viewWillLayoutSubviews() {
@@ -71,10 +72,14 @@ class MovieSearchView: UIViewController {
 }
 
 extension MovieSearchView: MovieSearchViewInput {
-    
-    
     func display(_ state: MovieSearchModel.Function.State) {
-        
+        switch state {
+        case .MovieResults(let movies):
+            self.movies = movies
+            tableView.reloadData()
+        case .Error(let errorString):
+            break
+        }
     }
 }
 
@@ -99,12 +104,11 @@ extension MovieSearchView:UISearchBarDelegate {
         } else {
             refresh()
         }
-        tableView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
-        refresh()
+        movies = []
         tableView.reloadData()
     }
 }

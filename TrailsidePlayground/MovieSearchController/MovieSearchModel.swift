@@ -17,15 +17,20 @@ struct MovieSearchModel {
         }
         
         enum Response {
-            
+            case SearchError(error:MovieSearchError)
+            case ProcessMovies(movieResultDTO:MovieSearchResultDTO)
         }
         
         enum State {
-            
+            case MovieResults(movies:[MovieSearchViewModel])
+            case Error(errorString:String)
         }
     }
     
     enum MovieSearchError:Error {
-        case UnableToFindMovie
+        case NetworkRequest
+        case CorruptedData
+        case UnableToRetrieveData
+        case UnableToSetupURL
     }
 }
