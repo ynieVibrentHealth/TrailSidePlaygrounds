@@ -56,6 +56,20 @@ class MovieSearchView: UIViewController {
         return loading
     }()
     
+    fileprivate lazy var searchMovieObservable:PublishSubject<Bool> = {
+        let observable:PublishSubject<Bool> = PublishSubject<Bool>()
+        observable
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (_) in
+                guard let _self = self,
+                    let searchText = self?.searchbar.text,
+                    !searchText.isEmpty else {return}
+                _self.output?.handle(.SearchMovie(searchTerm: searchText))
+            }).disposed(by: self.disposeBag)
+        
+        return observable
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -121,9 +135,9 @@ extension MovieSearchView:UITableViewDataSource, UITableViewDelegate {
 extension MovieSearchView:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.isEmpty {
-            self.loadingIndicator.isHidden = false
+            loadingIndicator.isHidden = false
             view.bringSubviewToFront(loadingIndicator)
-            output?.handle(.SearchMovie(searchTerm: searchText))
+            searchMovieObservable.onNext(true)
         } else {
             refresh()
         }
