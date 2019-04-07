@@ -65,26 +65,26 @@ class MovieContentView:UIView {
     
     override func updateConstraints() {
         moviePoster.snp.updateConstraints { (make) in
-            make.width.equalTo(67).priority(999)
-            make.height.equalTo(100).priority(999)
+            make.width.equalTo(67)
+            make.height.equalTo(100)
             make.leading.top.equalTo(self).inset(15).priority(999)
-            make.bottom.equalTo(self).inset(10).priority(999)
+            make.bottom.equalTo(self).inset(10)
         }
         
         titleLabel.snp.updateConstraints { (make) in
-            make.leading.equalTo(moviePoster.snp.trailing).offset(10).priority(999)
-            make.top.equalTo(moviePoster).priority(999)
-            make.trailing.equalTo(self).inset(15).priority(999)
+            make.leading.equalTo(moviePoster.snp.trailing).offset(10)
+            make.top.equalTo(moviePoster)
+            make.trailing.equalTo(self).inset(15)
         }
         
         directorLabel.snp.updateConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(5).priority(999)
-            make.leading.trailing.equalTo(titleLabel).priority(999)
+            make.top.equalTo(titleLabel.snp.bottom).offset(5)
+            make.leading.trailing.equalTo(titleLabel)
         }
         
         releaseDateLabel.snp.updateConstraints { (make) in
-            make.top.equalTo(directorLabel.snp.bottom).offset(5).priority(999)
-            make.leading.trailing.equalTo(titleLabel).priority(999)
+            make.top.equalTo(directorLabel.snp.bottom).offset(5)
+            make.leading.trailing.equalTo(titleLabel)
         }
         
         contentDescriptionLabel.snp.updateConstraints { (make) in

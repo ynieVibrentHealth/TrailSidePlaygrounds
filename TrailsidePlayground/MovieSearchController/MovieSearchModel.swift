@@ -31,6 +31,5 @@ struct MovieSearchModel {
         case NetworkRequest
         case CorruptedData
         case UnableToRetrieveData
-        case UnableToSetupURL
     }
 }

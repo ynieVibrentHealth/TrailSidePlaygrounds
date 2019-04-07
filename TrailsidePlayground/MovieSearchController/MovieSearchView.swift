@@ -26,7 +26,7 @@ class MovieSearchView: UIViewController {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
@@ -43,6 +43,7 @@ class MovieSearchView: UIViewController {
         searchbar.autocorrectionType = .no
         searchbar.autocapitalizationType = .none
         searchbar.showsCancelButton = true
+        searchbar.placeholder = "Search for a movie!"
         self.view.addSubview(searchbar)
         return searchbar
     }()

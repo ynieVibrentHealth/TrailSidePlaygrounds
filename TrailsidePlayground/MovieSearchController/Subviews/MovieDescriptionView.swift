@@ -20,6 +20,13 @@ class MovieDescriptionView:UIView {
         return label
     }()
     
+    fileprivate lazy var dividerLine:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.lightGray
+        self.addSubview(view)
+        return view
+    }()
+    
     public func configure(with viewModel:MovieSearchViewModel) {
         self.descriptionLabel.text = viewModel.description
     }
@@ -28,6 +35,13 @@ class MovieDescriptionView:UIView {
         descriptionLabel.snp.updateConstraints { (make) in
             make.edges.equalTo(self).inset(15).priority(999)
         }
+        
+        dividerLine.snp.updateConstraints { (make) in
+            make.leading.trailing.equalTo(self).inset(15).priority(999)
+            make.bottom.equalTo(self).priority(999)
+            make.height.equalTo(0.5)
+        }
+        
         super.updateConstraints()
     }
 
