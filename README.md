@@ -1,5 +1,6 @@
 # TrailSidePlaygrounds
-<b>A Project to test out iTunes's search api. This project allows a user to search for</b>
+<b>A Project to test out iTunes's search api.</b>
+<p>This project allows a user to search for movies, and add movies to a list of favorites.
 
 ### Getting Started
 
