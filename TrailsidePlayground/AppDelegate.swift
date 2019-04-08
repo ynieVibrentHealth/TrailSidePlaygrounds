@@ -54,6 +54,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return .portrait
+        case .pad:
+            return .allButUpsideDown
+        default:
+            return .allButUpsideDown
+        }
+    }
+    
     //shortcut for app delegate
     static let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 }
