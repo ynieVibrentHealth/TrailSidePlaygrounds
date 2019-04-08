@@ -113,7 +113,7 @@ class MovieSearchViewModelGenerator {
     
     private func checkIfFavorited(from movieDTO:MovieSearchDTO) -> Bool {
         guard let movieId = movieDTO.trackId,
-        let movies = FavoriteMovieCoreDataHelper.instance.getFavoritedMovies(from: "\(movieId)")
+        let movies = FavoriteMovieCoreDataHelper.instance.getFavoritedMovie(from: "\(movieId)")
             else {return false}
         return movies.count > 0
     }

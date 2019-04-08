@@ -35,7 +35,7 @@ class FavoriteMovieCoreDataHelper {
         completion(true)
     }
     
-    internal func getAllFavoritedMovies() -> [FavoriteMovie]?{
+    private func fetchAllFavoritedMovies() -> [FavoriteMovie]?{
         let context = AppDelegate.appDelegate.persistentContainer.viewContext
         let request = FavoriteMovie.fetchRequest() as NSFetchRequest<FavoriteMovie>
         let sort = NSSortDescriptor(key: #keyPath(FavoriteMovie.id), ascending: true, selector: #selector(NSString.caseInsensitiveCompare(_:)))
@@ -51,7 +51,7 @@ class FavoriteMovieCoreDataHelper {
         }
     }
     
-    internal func getFavoritedMovies(from movieId:String) -> [FavoriteMovie]?{
+    internal func getFavoritedMovie(from movieId:String) -> [FavoriteMovie]?{
         let context = AppDelegate.appDelegate.persistentContainer.viewContext
         let request = FavoriteMovie.fetchRequest() as NSFetchRequest<FavoriteMovie>
         let sort = NSSortDescriptor(key: #keyPath(FavoriteMovie.id), ascending: true, selector: #selector(NSString.caseInsensitiveCompare(_:)))
@@ -66,5 +66,24 @@ class FavoriteMovieCoreDataHelper {
             print("Unable to fetch \(error)")
             return nil
         }
+    }
+    
+    public func loadAllFavoriteMovies() -> [MovieSearchViewModel] {
+        guard let movies = fetchAllFavoritedMovies() else {return []}
+        let movieViewModel = movies.map { (movieModel) -> MovieSearchViewModel? in
+            guard let title:String = movieModel.title,
+                let director:String = movieModel.director,
+                let year:String = movieModel.year,
+                let description:String = movieModel.movieDescription,
+                let imageURLString:String = movieModel.imageURL,
+                let id:String = movieModel.id,
+                let contentInformation:String = movieModel.contentInformation,
+                let rentHD:String = movieModel.rentHD,
+                let rentSD:String = movieModel.rentSD,
+                let buyHD:String = movieModel.buyHD,
+                let buySD:String = movieModel.buySD else {return nil}
+            return MovieSearchViewModel(title: title, director: director, year: year, description: description, imageURLString: imageURLString, trackId: id, contentInformation: contentInformation, isFavorite: true, rentHD: rentHD, rentSD: rentSD, buyHD: buyHD, buySD: buySD)
+        }.compactMap({$0})
+        return movieViewModel
     }
 }

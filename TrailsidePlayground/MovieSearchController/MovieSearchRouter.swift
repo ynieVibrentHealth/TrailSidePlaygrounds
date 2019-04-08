@@ -10,6 +10,7 @@ import Foundation
 
 enum MovieSearchDestination {
     case MovieDetails(movieViewModel:MovieSearchViewModel)
+    case FavoriteMovies
 }
 
 class MovieSearchRouter {
@@ -25,6 +26,9 @@ class MovieSearchRouter {
             let detailsView = MovieDetailView()
             MovieDetailConfigurator.instance.configure(with: detailsView, movieViewModel: movieViewModel)
             view.navigationController?.pushViewController(detailsView, animated: true)
+        case .FavoriteMovies:
+            let favoriteMovies = FavoritesView()
+            view.navigationController?.pushViewController(favoriteMovies, animated: true)
         }
     }
 }

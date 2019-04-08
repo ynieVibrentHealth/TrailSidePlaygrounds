@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import RxSwift
+import RxCocoa
 
 protocol MovieSearchViewInput {
     func display(_ state:MovieSearchModel.Function.State)
@@ -19,7 +20,7 @@ class MovieSearchView: UIViewController {
     public var output:MovieSearchInteractorInput?
     public var router:MovieSearchRouter?
     
-    fileprivate lazy var disposeBag:DisposeBag = DisposeBag()
+    fileprivate let disposeBag:DisposeBag = DisposeBag()
     fileprivate var movies:[MovieSearchViewModel] = [MovieSearchViewModel]()
     private var searchText:String = ""
     
@@ -48,6 +49,16 @@ class MovieSearchView: UIViewController {
         return searchbar
     }()
     
+    fileprivate lazy var favoriteMoviesButton:UIBarButtonItem = {
+        let button = UIBarButtonItem()
+        button.title = "Favorites"
+        button.rx.tap.subscribe(onNext: { [weak self] (_) in
+            self?.router?.navigate(to: .FavoriteMovies)
+        }).disposed(by: self.disposeBag)
+        button.isAccessibilityElement = true
+        return button
+    }()
+    
     fileprivate lazy var loadingIndicator:LoadingIndicator = {
         let loading = LoadingIndicator()
         loading.loadActivity()
@@ -65,7 +76,6 @@ class MovieSearchView: UIViewController {
                     !_self.searchText.isEmpty else {return}
                 _self.output?.handle(.SearchMovie(searchTerm: _self.searchText))
             }).disposed(by: self.disposeBag)
-        
         return observable
     }()
     
@@ -73,6 +83,7 @@ class MovieSearchView: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Search iTunes Movies"
+        navigationItem.rightBarButtonItem = favoriteMoviesButton
         edgesForExtendedLayout = []
     }
     
