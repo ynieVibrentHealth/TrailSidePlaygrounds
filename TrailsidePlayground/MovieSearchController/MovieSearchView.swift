@@ -21,6 +21,7 @@ class MovieSearchView: UIViewController {
     
     fileprivate lazy var disposeBag:DisposeBag = DisposeBag()
     fileprivate var movies:[MovieSearchViewModel] = [MovieSearchViewModel]()
+    private var searchText:String = ""
     
     fileprivate lazy var tableView:UITableView = {
         let tableView = UITableView()
@@ -61,9 +62,8 @@ class MovieSearchView: UIViewController {
             .debounce(0.5, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_) in
                 guard let _self = self,
-                    let searchText = self?.searchbar.text,
-                    !searchText.isEmpty else {return}
-                _self.output?.handle(.SearchMovie(searchTerm: searchText))
+                    !_self.searchText.isEmpty else {return}
+                _self.output?.handle(.SearchMovie(searchTerm: _self.searchText))
             }).disposed(by: self.disposeBag)
         
         return observable
@@ -74,6 +74,11 @@ class MovieSearchView: UIViewController {
         view.backgroundColor = .white
         title = "Search iTunes Movies"
         edgesForExtendedLayout = []
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        searchMovieObservable.onNext(true)
     }
     
     override func viewWillLayoutSubviews() {
@@ -95,6 +100,7 @@ class MovieSearchView: UIViewController {
     
     private func refresh() {
         self.searchbar.text = ""
+        searchText = ""
         self.loadingIndicator.isHidden = true
         movies = []
         tableView.reloadData()
@@ -139,13 +145,10 @@ extension MovieSearchView:UITableViewDataSource, UITableViewDelegate {
 
 extension MovieSearchView:UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if !searchText.isEmpty {
-            loadingIndicator.isHidden = false
-            view.bringSubviewToFront(loadingIndicator)
-            searchMovieObservable.onNext(true)
-        } else {
-            refresh()
-        }
+        loadingIndicator.isHidden = false
+        view.bringSubviewToFront(loadingIndicator)
+        self.searchText = searchText
+        searchMovieObservable.onNext(true)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

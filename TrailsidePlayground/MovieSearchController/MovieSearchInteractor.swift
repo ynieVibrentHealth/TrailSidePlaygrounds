@@ -28,7 +28,6 @@ class MovieSearchInteractor:MovieSearchInteractorInput {
                 do {
                     let decoder = JSONDecoder()
                     let movieSearchResult = try decoder.decode(MovieSearchResultDTO.self, from:responseObj)
-                    print(movieSearchResult.results.first?.trackName)
                     self?.output?.process(.ProcessMovies(movieResultDTO: movieSearchResult))
                 } catch {
                     self?.sendError(with: .CorruptedData)

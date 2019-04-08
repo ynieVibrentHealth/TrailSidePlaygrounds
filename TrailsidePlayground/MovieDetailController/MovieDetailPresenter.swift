@@ -21,6 +21,8 @@ class MovieDetailPresenter: MovieDetailPresenterInput {
             generateMovieDetailsDTO(with: movieResultDTO)
         case .MovieError(let error):
             generateError(with: error)
+        case .FavoriteSaved(let movie):
+            output?.display(.SaveSuccess(movie: movie))
         }
     }
     

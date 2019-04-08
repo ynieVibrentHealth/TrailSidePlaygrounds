@@ -45,7 +45,11 @@ class MovieSearchViewModelGenerator {
                                     imageURLString: artworkUrl60,
                                     trackId: "\(trackId)",
             contentInformation: generateContentInformation(from: movieDTO),
-            isFavorite: false, rentHD: rentHDPrice(from: movieDTO), rentSD: rentSDPrice(from: movieDTO), buyHD: buyHDPrice(from: movieDTO), buySD: buySDPrice(from: movieDTO))
+            isFavorite: checkIfFavorited(from: movieDTO),
+            rentHD: rentHDPrice(from: movieDTO),
+            rentSD: rentSDPrice(from: movieDTO),
+            buyHD: buyHDPrice(from: movieDTO),
+            buySD: buySDPrice(from: movieDTO))
     }
     
     private func generateReleaseDate(from dtoDate:String) -> String{
@@ -73,7 +77,7 @@ class MovieSearchViewModelGenerator {
     
     private func rentHDPrice(from movieDTO:MovieSearchDTO) -> String {
         if let price = movieDTO.trackHdRentalPrice {
-            let amount = String(format: "$%.02f", price)
+            let amount = String(format: "Rent HD $%.02f", price)
             return amount
         } else {
             return "Rent HD"
@@ -82,7 +86,7 @@ class MovieSearchViewModelGenerator {
     
     private func rentSDPrice(from movieDTO:MovieSearchDTO) -> String {
         if let price = movieDTO.trackRentalPrice {
-            let amount = String(format: "$%.02f", price)
+            let amount = String(format: "Rent $%.02f", price)
             return amount
         } else {
             return "Rent"
@@ -91,7 +95,7 @@ class MovieSearchViewModelGenerator {
     
     private func buyHDPrice(from movieDTO:MovieSearchDTO) -> String {
         if let price = movieDTO.trackHdPrice {
-            let amount = String(format: "$%.02f", price)
+            let amount = String(format: "Buy HD $%.02f", price)
             return amount
         } else {
             return "Buy HD"
@@ -100,10 +104,17 @@ class MovieSearchViewModelGenerator {
     
     private func buySDPrice(from movieDTO:MovieSearchDTO) -> String {
         if let price = movieDTO.trackPrice {
-            let amount = String(format: "$%.02f", price)
+            let amount = String(format: "Buy $%.02f", price)
             return amount
         } else {
             return "Buy"
         }
+    }
+    
+    private func checkIfFavorited(from movieDTO:MovieSearchDTO) -> Bool {
+        guard let movieId = movieDTO.trackId,
+        let movies = FavoriteMovieCoreDataHelper.instance.getFavoritedMovies(from: "\(movieId)")
+            else {return false}
+        return movies.count > 0
     }
 }

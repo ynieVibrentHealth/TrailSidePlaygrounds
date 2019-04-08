@@ -12,16 +12,19 @@ struct MovieDetailModel {
     struct Function {
         enum Request {
             case MovieDetails(movieId:String)
+            case SaveFavorite(movie:MovieSearchViewModel)
         }
         
         enum Response {
             case MovieError(error:MovieDetailError)
             case ProcessMovieDetails(movieResultDTO:MovieSearchDTO)
+            case FavoriteSaved(movie:MovieSearchViewModel)
         }
         
         enum State {
             case Error(errorString:String)
             case MovieDetails(movieDetails:MovieSearchViewModel)
+            case SaveSuccess(movie:MovieSearchViewModel)
         }
     }
     

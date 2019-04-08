@@ -19,6 +19,8 @@ class MovieDetailInteractor: MovieDetailInteractorInput {
         switch request {
         case .MovieDetails(let movieId):
             loadMovieDetails(with: movieId)
+        case .SaveFavorite(let movie):
+            saveFavorite(movie: movie)
         }
     }
     
@@ -38,6 +40,14 @@ class MovieDetailInteractor: MovieDetailInteractorInput {
                 }
             } else {
                 self?.sendError(with: .UnableToRetrieve)
+            }
+        }
+    }
+    
+    private func saveFavorite(movie:MovieSearchViewModel) {
+        FavoriteMovieCoreDataHelper.instance.saveFavoriteMovie(movieViewModel: movie) { (success) in
+            if success {
+                output?.process(.FavoriteSaved(movie: movie))
             }
         }
     }
