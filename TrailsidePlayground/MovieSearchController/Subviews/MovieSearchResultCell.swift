@@ -30,6 +30,11 @@ class MovieSearchResultCell:UITableViewCell {
         descriptionView.configure(with: viewModel)
         stackContainer.addArrangedSubview(descriptionView)
         
+        self.isAccessibilityElement = true
+        let letters = NSCharacterSet.letters
+        let accessibilityID = String(viewModel.title.unicodeScalars.filter({letters.contains($0)}))
+        self.accessibilityIdentifier = "\(AutomationConstants.MovieSearchView.MovieResultCell.rawValue)\(accessibilityID)"
+        
         setNeedsUpdateConstraints()
         updateConstraintsIfNeeded()
     }

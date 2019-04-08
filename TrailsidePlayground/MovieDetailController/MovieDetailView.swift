@@ -35,7 +35,12 @@ class MovieDetailView:UIViewController, ViewControllerShowsError {
     fileprivate lazy var movieDescriptionView:MovieDescriptionView = MovieDescriptionView()
     fileprivate lazy var rentButtonView:MovieDetailTwoButtonView = MovieDetailTwoButtonView()
     fileprivate lazy var buyButtonView:MovieDetailTwoButtonView = MovieDetailTwoButtonView()
-    fileprivate lazy var favoriteButtonView:MovieDetailButtonView = MovieDetailButtonView()
+    fileprivate lazy var favoriteButtonView:MovieDetailButtonView = {
+        let buttonView = MovieDetailButtonView()
+        buttonView.button.accessibilityIdentifier = AutomationConstants.MovieDetailsView.FavoritesButton.rawValue
+        buttonView.button.isAccessibilityElement = true
+        return buttonView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

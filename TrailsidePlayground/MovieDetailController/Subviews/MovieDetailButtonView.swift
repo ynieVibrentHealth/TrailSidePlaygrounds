@@ -15,7 +15,7 @@ class MovieDetailButtonView:UIView {
     private let disposeBag:DisposeBag = DisposeBag()
     private var width:CGFloat?
     
-    fileprivate lazy var button:UIButton = {
+    public lazy var button:UIButton = {
         let button = UIButton()
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.setTitleColor(.white, for: .normal)
