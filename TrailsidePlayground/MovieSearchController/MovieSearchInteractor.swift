@@ -12,6 +12,7 @@ protocol MovieSearchInteractorInput {
     func handle(_ request:MovieSearchModel.Function.Request)
 }
 
+///Class to handle api requests
 class MovieSearchInteractor:MovieSearchInteractorInput {
     public var output:MovieSearchPresenterInput?
     

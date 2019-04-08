@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let persistentContainer = NSPersistentContainer(name: "UserFavoriteMovie")
         persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error {
-                fatalError("Unresolved error, \((error as NSError).userInfo)")
+                fatalError("Core Data error: \(error)")
             }
         })
         return persistentContainer

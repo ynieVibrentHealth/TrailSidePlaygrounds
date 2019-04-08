@@ -67,6 +67,7 @@ class MovieSearchView: UIViewController {
         return loading
     }()
     
+    ///After user enteres their search term, the observable will send off a request after a predetermined period of inactivity
     fileprivate lazy var searchMovieObservable:PublishSubject<Bool> = {
         let observable:PublishSubject<Bool> = PublishSubject<Bool>()
         observable

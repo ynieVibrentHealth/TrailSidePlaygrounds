@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+///Wrapper for alamofire api requests to iTunes
 class HTTPWorker {
     static let instance:HTTPWorker = HTTPWorker()
     private init(){}
