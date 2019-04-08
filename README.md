@@ -1,15 +1,15 @@
 # TrailSidePlaygrounds
-A Project to test out iTunes's search api. This project allows a user to search for
+<b>A Project to test out iTunes's search api. This project allows a user to search for</b>
 
-###Getting Started
+### Getting Started
 
-In order to run this project, please make sure you have [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) installed in your environment. After that, run:
+1. In order to run this project, please make sure you have [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) installed in your environment. After that, run:
 
 ```
 pod install
 ```
 
-Then, open the workspace file: <b>TrailsidePlayground.xcworkspace</b>
+2. Then, open the workspace file: <b>TrailsidePlayground.xcworkspace</b>
 
 
 ### Future Improvements
