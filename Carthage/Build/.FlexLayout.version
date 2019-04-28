@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.3.12",
+  "iOS" : [
+    {
+      "name" : "FlexLayout",
+      "hash" : "d4951122d6b051a1bee97598638127fb8b0b04b352d5eebf79e42e3c59cfd508",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

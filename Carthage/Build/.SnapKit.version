@@ -1,0 +1,10 @@
+{
+  "commitish" : "5.0.0",
+  "iOS" : [
+    {
+      "name" : "SnapKit",
+      "hash" : "222267f57ca15c4151be56156b1865bb64869df8d87b31f6c00e3285e7e0f6d5",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

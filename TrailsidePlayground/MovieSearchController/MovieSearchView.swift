@@ -70,8 +70,9 @@ class MovieSearchView: UIViewController {
     ///After user enteres their search term, the observable will send off a request after a predetermined period of inactivity
     fileprivate lazy var searchMovieObservable:PublishSubject<Bool> = {
         let observable:PublishSubject<Bool> = PublishSubject<Bool>()
+        let timeInterval = RxTimeInterval.milliseconds(500)
         observable
-            .debounce(0.5, scheduler: MainScheduler.instance)
+            .debounce(timeInterval, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_) in
                 guard let _self = self,
                     !_self.searchText.isEmpty else {return}

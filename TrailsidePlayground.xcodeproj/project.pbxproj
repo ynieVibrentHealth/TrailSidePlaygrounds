@@ -3,10 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5CBD04227644B80054B573 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5CBCF722763E390054B573 /* Alamofire.framework */; };
+		4C5CBD06227644B80054B573 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5CBCF822763E390054B573 /* Kingfisher.framework */; };
+		4CAE01102276474100F8F69B /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE010E2276474100F8F69B /* FlexLayout.framework */; };
+		4CAE01112276474100F8F69B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE010F2276474100F8F69B /* SnapKit.framework */; };
+		4CAE01142276474800F8F69B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE01122276474800F8F69B /* RxSwift.framework */; };
+		4CAE01152276474800F8F69B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE01132276474800F8F69B /* RxCocoa.framework */; };
+		4CAE01182276476000F8F69B /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CAE01162276476000F8F69B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CAE01192276476000F8F69B /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CAE01172276476000F8F69B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CAE011E2276476800F8F69B /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CAE011A2276476800F8F69B /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CAE011F2276476800F8F69B /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CAE011B2276476800F8F69B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CAE01202276476800F8F69B /* FlexLayout.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CAE011C2276476800F8F69B /* FlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CAE01212276476800F8F69B /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CAE011D2276476800F8F69B /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CB687F522596D16007C1D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB687F422596D16007C1D86 /* AppDelegate.swift */; };
 		4CB687FC22596D17007C1D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB687FB22596D17007C1D86 /* Assets.xcassets */; };
 		4CB687FF22596D17007C1D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB687FD22596D17007C1D86 /* LaunchScreen.storyboard */; };
@@ -44,9 +56,6 @@
 		4CBBAEAE225B521400EBBC21 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAEAD225B521400EBBC21 /* TestHelper.swift */; };
 		4CBBAEB0225B546600EBBC21 /* JurassicMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBAEAF225B546600EBBC21 /* JurassicMock.json */; };
 		4CBBAEB2225B5AF000EBBC21 /* AutomationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAEB1225B5AF000EBBC21 /* AutomationConstants.swift */; };
-		611E5EE66D06AD0AEF279BBB /* Pods_TrailsidePlaygroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1153869D956FBC1A9C1E17 /* Pods_TrailsidePlaygroundUITests.framework */; };
-		FAFD94467B5149E0541C6F28 /* Pods_TrailsidePlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFACD41B0F075496A4C0982 /* Pods_TrailsidePlaygroundTests.framework */; };
-		FC9BFD77EDB79597339EB781 /* Pods_TrailsidePlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C2FA66DB660230670A3F72 /* Pods_TrailsidePlayground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +75,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4CAE01012276463200F8F69B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4CAE01182276476000F8F69B /* RxSwift.framework in CopyFiles */,
+				4CAE01192276476000F8F69B /* RxCocoa.framework in CopyFiles */,
+				4CAE011E2276476800F8F69B /* SnapKit.framework in CopyFiles */,
+				4CAE011F2276476800F8F69B /* Alamofire.framework in CopyFiles */,
+				4CAE01202276476800F8F69B /* FlexLayout.framework in CopyFiles */,
+				4CAE01212276476800F8F69B /* Kingfisher.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		02DF90CB4648D2E3786A02D7 /* Pods-TrailsidePlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlayground.debug.xcconfig"; path = "Target Support Files/Pods-TrailsidePlayground/Pods-TrailsidePlayground.debug.xcconfig"; sourceTree = "<group>"; };
-		2C1153869D956FBC1A9C1E17 /* Pods_TrailsidePlaygroundUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailsidePlaygroundUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5CBCF722763E390054B573 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		4C5CBCF822763E390054B573 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		4CAE01022276469000F8F69B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		4CAE01032276469000F8F69B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		4CAE01042276469000F8F69B /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FlexLayout.framework; sourceTree = "<group>"; };
+		4CAE01052276469000F8F69B /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
+		4CAE01062276469000F8F69B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		4CAE010E2276474100F8F69B /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
+		4CAE010F2276474100F8F69B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		4CAE01122276474800F8F69B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/Static/RxSwift.framework; sourceTree = "<group>"; };
+		4CAE01132276474800F8F69B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/Static/RxCocoa.framework; sourceTree = "<group>"; };
+		4CAE01162276476000F8F69B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/Static/RxSwift.framework; sourceTree = "<group>"; };
+		4CAE01172276476000F8F69B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/Static/RxCocoa.framework; sourceTree = "<group>"; };
+		4CAE011A2276476800F8F69B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		4CAE011B2276476800F8F69B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		4CAE011C2276476800F8F69B /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
+		4CAE011D2276476800F8F69B /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		4CB687F122596D16007C1D86 /* TrailsidePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailsidePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB687F422596D16007C1D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB687FB22596D17007C1D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,13 +154,6 @@
 		4CBBAEAD225B521400EBBC21 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		4CBBAEAF225B546600EBBC21 /* JurassicMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JurassicMock.json; sourceTree = "<group>"; };
 		4CBBAEB1225B5AF000EBBC21 /* AutomationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationConstants.swift; sourceTree = "<group>"; };
-		4FFACD41B0F075496A4C0982 /* Pods_TrailsidePlaygroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailsidePlaygroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		674EFAE33B9F7F38E553843B /* Pods-TrailsidePlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-TrailsidePlaygroundTests/Pods-TrailsidePlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
-		727766B4C1AEFF628FC855B5 /* Pods-TrailsidePlaygroundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlaygroundUITests.release.xcconfig"; path = "Target Support Files/Pods-TrailsidePlaygroundUITests/Pods-TrailsidePlaygroundUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9093761AB71CCC88CCF141C6 /* Pods-TrailsidePlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlayground.release.xcconfig"; path = "Target Support Files/Pods-TrailsidePlayground/Pods-TrailsidePlayground.release.xcconfig"; sourceTree = "<group>"; };
-		A6C2FA66DB660230670A3F72 /* Pods_TrailsidePlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailsidePlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED947D7DDAD05A0BDFB496D4 /* Pods-TrailsidePlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-TrailsidePlaygroundTests/Pods-TrailsidePlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FEA8BC7347C721655CA2A8AD /* Pods-TrailsidePlaygroundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailsidePlaygroundUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrailsidePlaygroundUITests/Pods-TrailsidePlaygroundUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +161,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC9BFD77EDB79597339EB781 /* Pods_TrailsidePlayground.framework in Frameworks */,
+				4CAE01102276474100F8F69B /* FlexLayout.framework in Frameworks */,
+				4CAE01142276474800F8F69B /* RxSwift.framework in Frameworks */,
+				4CAE01152276474800F8F69B /* RxCocoa.framework in Frameworks */,
+				4CAE01112276474100F8F69B /* SnapKit.framework in Frameworks */,
+				4C5CBD04227644B80054B573 /* Alamofire.framework in Frameworks */,
+				4C5CBD06227644B80054B573 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +174,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFD94467B5149E0541C6F28 /* Pods_TrailsidePlaygroundTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,34 +181,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611E5EE66D06AD0AEF279BBB /* Pods_TrailsidePlaygroundUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F5AB980A6595B592BC444E7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				02DF90CB4648D2E3786A02D7 /* Pods-TrailsidePlayground.debug.xcconfig */,
-				9093761AB71CCC88CCF141C6 /* Pods-TrailsidePlayground.release.xcconfig */,
-				ED947D7DDAD05A0BDFB496D4 /* Pods-TrailsidePlaygroundTests.debug.xcconfig */,
-				674EFAE33B9F7F38E553843B /* Pods-TrailsidePlaygroundTests.release.xcconfig */,
-				FEA8BC7347C721655CA2A8AD /* Pods-TrailsidePlaygroundUITests.debug.xcconfig */,
-				727766B4C1AEFF628FC855B5 /* Pods-TrailsidePlaygroundUITests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		4CB687E822596D16007C1D86 = {
 			isa = PBXGroup;
 			children = (
+				4CAE011B2276476800F8F69B /* Alamofire.framework */,
+				4CAE011C2276476800F8F69B /* FlexLayout.framework */,
+				4CAE011D2276476800F8F69B /* Kingfisher.framework */,
+				4CAE011A2276476800F8F69B /* SnapKit.framework */,
+				4CAE01172276476000F8F69B /* RxCocoa.framework */,
+				4CAE01162276476000F8F69B /* RxSwift.framework */,
 				4CB687F322596D16007C1D86 /* TrailsidePlayground */,
 				4CB6880822596D17007C1D86 /* TrailsidePlaygroundTests */,
 				4CB6881322596D17007C1D86 /* TrailsidePlaygroundUITests */,
 				4CB687F222596D16007C1D86 /* Products */,
-				1F5AB980A6595B592BC444E7 /* Pods */,
 				D476CBA6DF55162A1CA75F44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -360,9 +390,17 @@
 		D476CBA6DF55162A1CA75F44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6C2FA66DB660230670A3F72 /* Pods_TrailsidePlayground.framework */,
-				4FFACD41B0F075496A4C0982 /* Pods_TrailsidePlaygroundTests.framework */,
-				2C1153869D956FBC1A9C1E17 /* Pods_TrailsidePlaygroundUITests.framework */,
+				4CAE01132276474800F8F69B /* RxCocoa.framework */,
+				4CAE01122276474800F8F69B /* RxSwift.framework */,
+				4CAE010E2276474100F8F69B /* FlexLayout.framework */,
+				4CAE010F2276474100F8F69B /* SnapKit.framework */,
+				4C5CBCF722763E390054B573 /* Alamofire.framework */,
+				4CAE01022276469000F8F69B /* Alamofire.framework */,
+				4CAE01042276469000F8F69B /* FlexLayout.framework */,
+				4C5CBCF822763E390054B573 /* Kingfisher.framework */,
+				4CAE01052276469000F8F69B /* Kingfisher.framework */,
+				4CAE01062276469000F8F69B /* RxCocoa.framework */,
+				4CAE01032276469000F8F69B /* RxSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -374,11 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CB6881922596D17007C1D86 /* Build configuration list for PBXNativeTarget "TrailsidePlayground" */;
 			buildPhases = (
-				5444EA71C720521639122F83 /* [CP] Check Pods Manifest.lock */,
 				4CB687ED22596D16007C1D86 /* Sources */,
 				4CB687EE22596D16007C1D86 /* Frameworks */,
+				4C5CBD0222763E4B0054B573 /* Carthage */,
+				4CAE01012276463200F8F69B /* CopyFiles */,
 				4CB687EF22596D16007C1D86 /* Resources */,
-				1DF5FC2D37A875F963EC7CD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,11 +431,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CB6881C22596D17007C1D86 /* Build configuration list for PBXNativeTarget "TrailsidePlaygroundTests" */;
 			buildPhases = (
-				2AC460BC802761836BB4ED6F /* [CP] Check Pods Manifest.lock */,
 				4CB6880122596D17007C1D86 /* Sources */,
 				4CB6880222596D17007C1D86 /* Frameworks */,
 				4CB6880322596D17007C1D86 /* Resources */,
-				4D15723D1C9C981B653E9193 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -413,11 +449,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CB6881F22596D17007C1D86 /* Build configuration list for PBXNativeTarget "TrailsidePlaygroundUITests" */;
 			buildPhases = (
-				FFC36D92948BC04BCDB0EF94 /* [CP] Check Pods Manifest.lock */,
 				4CB6880C22596D17007C1D86 /* Sources */,
 				4CB6880D22596D17007C1D86 /* Frameworks */,
 				4CB6880E22596D17007C1D86 /* Resources */,
-				73A062D476B0C47394617BF1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,122 +534,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1DF5FC2D37A875F963EC7CD1 /* [CP] Embed Pods Frameworks */ = {
+		4C5CBD0222763E4B0054B573 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlayground/Pods-TrailsidePlayground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlayground/Pods-TrailsidePlayground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlayground/Pods-TrailsidePlayground-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2AC460BC802761836BB4ED6F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"$(SRCROOT)/Carthage/Build/iOS/FlexLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Static/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Static/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TrailsidePlaygroundTests-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D15723D1C9C981B653E9193 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlaygroundTests/Pods-TrailsidePlaygroundTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlaygroundTests/Pods-TrailsidePlaygroundTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlaygroundTests/Pods-TrailsidePlaygroundTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5444EA71C720521639122F83 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TrailsidePlayground-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73A062D476B0C47394617BF1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlaygroundUITests/Pods-TrailsidePlaygroundUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlaygroundUITests/Pods-TrailsidePlaygroundUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailsidePlaygroundUITests/Pods-TrailsidePlaygroundUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FFC36D92948BC04BCDB0EF94 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TrailsidePlaygroundUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -820,10 +761,14 @@
 		};
 		4CB6881A22596D17007C1D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02DF90CB4648D2E3786A02D7 /* Pods-TrailsidePlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrailsidePlayground/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -838,10 +783,14 @@
 		};
 		4CB6881B22596D17007C1D86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9093761AB71CCC88CCF141C6 /* Pods-TrailsidePlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrailsidePlayground/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -856,7 +805,6 @@
 		};
 		4CB6881D22596D17007C1D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED947D7DDAD05A0BDFB496D4 /* Pods-TrailsidePlaygroundTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -877,7 +825,6 @@
 		};
 		4CB6881E22596D17007C1D86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 674EFAE33B9F7F38E553843B /* Pods-TrailsidePlaygroundTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -898,7 +845,6 @@
 		};
 		4CB6882022596D17007C1D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEA8BC7347C721655CA2A8AD /* Pods-TrailsidePlaygroundUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -918,7 +864,6 @@
 		};
 		4CB6882122596D17007C1D86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 727766B4C1AEFF628FC855B5 /* Pods-TrailsidePlaygroundUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
