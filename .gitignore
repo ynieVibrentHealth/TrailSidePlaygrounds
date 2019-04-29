@@ -4,3 +4,6 @@ Pods/
 TrailsidePlayground.xcworkspace/*
 TrailsidePlayground.xcodeproj/project.xcworkspace/xcuserdata/
 TrailsidePlayground.xcodeproj/xcuserdata/
+FlexLayoutSample/Pods/
+FlexLayoutSample/FlexLayoutSample.xcworkspace
+FlexLayoutSample/Podfile.lock
