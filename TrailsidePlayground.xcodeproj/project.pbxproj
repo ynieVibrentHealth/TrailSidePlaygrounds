@@ -25,6 +25,10 @@
 		4CB6880A22596D17007C1D86 /* MovieViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6880922596D17007C1D86 /* MovieViewModelTests.swift */; };
 		4CB6881522596D17007C1D86 /* FavoritesIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6881422596D17007C1D86 /* FavoritesIntegrationTest.swift */; };
 		4CB6882522596E9B007C1D86 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6882422596E9B007C1D86 /* RootNavigationController.swift */; };
+		4CBB30B22277393700439BE4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB30B12277393700439BE4 /* MenuView.swift */; };
+		4CBB30B422774C7400439BE4 /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB30B322774C7400439BE4 /* PinLayout.framework */; };
+		4CBB30B522774C7400439BE4 /* PinLayout.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBB30B322774C7400439BE4 /* PinLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CBB30B722774EF800439BE4 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB30B622774EF800439BE4 /* MenuCell.swift */; };
 		4CBBAE4B225A706700EBBC21 /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE4A225A706700EBBC21 /* MovieSearchView.swift */; };
 		4CBBAE4D225A707500EBBC21 /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE4C225A707500EBBC21 /* MovieSearchInteractor.swift */; };
 		4CBBAE4F225A707F00EBBC21 /* MovieSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAE4E225A707F00EBBC21 /* MovieSearchPresenter.swift */; };
@@ -88,6 +92,7 @@
 				4CAE011F2276476800F8F69B /* Alamofire.framework in CopyFiles */,
 				4CAE01202276476800F8F69B /* FlexLayout.framework in CopyFiles */,
 				4CAE01212276476800F8F69B /* Kingfisher.framework in CopyFiles */,
+				4CBB30B522774C7400439BE4 /* PinLayout.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +128,9 @@
 		4CB6881422596D17007C1D86 /* FavoritesIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesIntegrationTest.swift; sourceTree = "<group>"; };
 		4CB6881622596D17007C1D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CB6882422596E9B007C1D86 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		4CBB30B12277393700439BE4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		4CBB30B322774C7400439BE4 /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
+		4CBB30B622774EF800439BE4 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		4CBBAE4A225A706700EBBC21 /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
 		4CBBAE4C225A707500EBBC21 /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
 		4CBBAE4E225A707F00EBBC21 /* MovieSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchPresenter.swift; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 				4CAE01112276474100F8F69B /* SnapKit.framework in Frameworks */,
 				4C5CBD04227644B80054B573 /* Alamofire.framework in Frameworks */,
 				4C5CBD06227644B80054B573 /* Kingfisher.framework in Frameworks */,
+				4CBB30B422774C7400439BE4 /* PinLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +199,7 @@
 		4CB687E822596D16007C1D86 = {
 			isa = PBXGroup;
 			children = (
+				4CBB30B322774C7400439BE4 /* PinLayout.framework */,
 				4CAE011B2276476800F8F69B /* Alamofire.framework */,
 				4CAE011C2276476800F8F69B /* FlexLayout.framework */,
 				4CAE011D2276476800F8F69B /* Kingfisher.framework */,
@@ -217,6 +227,7 @@
 		4CB687F322596D16007C1D86 /* TrailsidePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4CBB30B02277392500439BE4 /* MenuView */,
 				4CBBAEA6225AD68C00EBBC21 /* FavoritesController */,
 				4CBBAE87225AA3E500EBBC21 /* MovieDetailController */,
 				4CBBAE84225A9B9F00EBBC21 /* Shared */,
@@ -267,6 +278,15 @@
 				4CBBAE72225A87BA00EBBC21 /* UserFavoriteMovie.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4CBB30B02277392500439BE4 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB30B12277393700439BE4 /* MenuView.swift */,
+				4CBB30B622774EF800439BE4 /* MenuCell.swift */,
+			);
+			path = MenuView;
 			sourceTree = "<group>";
 		};
 		4CBBAE49225A703600EBBC21 /* MovieSearchController */ = {
@@ -548,6 +568,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Static/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Static/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PinLayout.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -570,6 +591,7 @@
 				4CBBAE7F225A958000EBBC21 /* MovieContentView.swift in Sources */,
 				4CBBAE8F225AA42E00EBBC21 /* MovieDetailModel.swift in Sources */,
 				4CBBAE4D225A707500EBBC21 /* MovieSearchInteractor.swift in Sources */,
+				4CBB30B722774EF800439BE4 /* MenuCell.swift in Sources */,
 				4CBBAE4B225A706700EBBC21 /* MovieSearchView.swift in Sources */,
 				4CBBAE5A225A757800EBBC21 /* MovieSearchRouter.swift in Sources */,
 				4CBBAEA1225ACAB500EBBC21 /* FavoriteMovie+CoreDataProperties.swift in Sources */,
@@ -590,6 +612,7 @@
 				4CBBAE9D225ABB8500EBBC21 /* MovieDetailTwoButtonView.swift in Sources */,
 				4CBBAE53225A709700EBBC21 /* MovieSearchViewModel.swift in Sources */,
 				4CBBAE8D225AA42200EBBC21 /* MovieDetailPresenter.swift in Sources */,
+				4CBB30B22277393700439BE4 /* MenuView.swift in Sources */,
 				4CBBAE86225A9FD000EBBC21 /* ViewControllerShowsError.swift in Sources */,
 				4CBBAE58225A72B200EBBC21 /* MovieSearchResultCell.swift in Sources */,
 				4CBBAEA3225ACB3D00EBBC21 /* FavoriteMovieCoreDataHelper.swift in Sources */,

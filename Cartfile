@@ -7,3 +7,5 @@ github "layoutBox/FlexLayout"
 github "ReactiveX/RxSwift" ~> 5.0
 
 github "onevcat/Kingfisher" ~> 5.0
+
+github "layoutBox/PinLayout"

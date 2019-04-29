@@ -1,0 +1,27 @@
+{
+  "Mac" : [
+    {
+      "name" : "PinLayout",
+      "hash" : "3ace226516a2baff2c37a15e6a7c3886ece9516a857ec74eec502623b096b75b",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "PinLayout",
+      "hash" : "56f9ce99375561f5702ac27ea8a8eedee7c04b99c877278501c19fdaa2ba4df1",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ],
+  "commitish" : "1.8.7",
+  "iOS" : [
+    {
+      "name" : "PinLayout",
+      "hash" : "e08fdb30ec5b8640b7d94f71ff426570ce8a7688c0574302a79364f9be163df1",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

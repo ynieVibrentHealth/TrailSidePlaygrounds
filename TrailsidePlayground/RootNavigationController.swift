@@ -11,12 +11,17 @@ import UIKit
 class RootNavigationController:UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMovieSearchController()
+        loadMenuView()
     }
     
     private func loadMovieSearchController() {
         let movieSearchController = MovieSearchView()
         MovieSearchConfigurator.configure(view: movieSearchController)
         setViewControllers([movieSearchController], animated: true)
+    }
+    
+    private func loadMenuView() {
+        let menuView = MenuView()
+        setViewControllers([menuView], animated: true)
     }
 }
