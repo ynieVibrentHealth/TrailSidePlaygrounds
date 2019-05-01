@@ -66,3 +66,4 @@ extension MenuView:UITableViewDelegate, UITableViewDataSource {
         return menuCell
     }
 }
+

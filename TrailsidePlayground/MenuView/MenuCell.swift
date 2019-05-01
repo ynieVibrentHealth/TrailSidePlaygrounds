@@ -15,7 +15,7 @@ class MenuCell:UITableViewCell {
     
     fileprivate lazy var flexContainer:UIView = {
         let view = UIView()
-
+        
         self.contentView.addSubview(view)
         return view
     }()
@@ -25,18 +25,29 @@ class MenuCell:UITableViewCell {
         label.backgroundColor = .white
         label.textColor = .darkGray
         label.numberOfLines = 0
+        self.contentView.flex.padding(12).define({ (flex) in
+            flex.addItem(label).margin(10, 5, 10, 5)
+        })
         return label
     }()
     
     public func configure(with text:String) {
         contentLabel.text = text
-        flexContainer.flex.direction(.row).padding(12).define({ (flex) in
-            flex.addItem(contentLabel)
-        })
+        contentLabel.flex.markDirty()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        flexContainer.pin.top().left().right().bottom()
+        layout()
+    }
+    
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        contentView.pin.width(size.width)
+        layout()
+        return contentView.frame.size
+    }
+    
+    private func layout() {
+        contentView.flex.layout(mode: .adjustHeight)
     }
 }
