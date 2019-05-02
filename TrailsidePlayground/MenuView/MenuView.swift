@@ -65,5 +65,9 @@ extension MenuView:UITableViewDelegate, UITableViewDataSource {
         }
         return menuCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 

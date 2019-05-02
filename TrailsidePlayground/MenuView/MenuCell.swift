@@ -13,13 +13,6 @@ import PinLayout
 class MenuCell:UITableViewCell {
     static let REUSE_ID:String = "MenuCell_REUSE_ID"
     
-    fileprivate lazy var flexContainer:UIView = {
-        let view = UIView()
-        
-        self.contentView.addSubview(view)
-        return view
-    }()
-    
     fileprivate lazy var contentLabel:UILabel = {
         let label = UILabel()
         label.backgroundColor = .white

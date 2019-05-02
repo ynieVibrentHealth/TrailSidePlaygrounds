@@ -60,6 +60,7 @@
 		4CBBAEAE225B521400EBBC21 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAEAD225B521400EBBC21 /* TestHelper.swift */; };
 		4CBBAEB0225B546600EBBC21 /* JurassicMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBAEAF225B546600EBBC21 /* JurassicMock.json */; };
 		4CBBAEB2225B5AF000EBBC21 /* AutomationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBAEB1225B5AF000EBBC21 /* AutomationConstants.swift */; };
+		4CC577C0227B1B38001AC5B9 /* MovieSearchResultLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC577BF227B1B38001AC5B9 /* MovieSearchResultLayoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		4CBBAEAD225B521400EBBC21 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		4CBBAEAF225B546600EBBC21 /* JurassicMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JurassicMock.json; sourceTree = "<group>"; };
 		4CBBAEB1225B5AF000EBBC21 /* AutomationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationConstants.swift; sourceTree = "<group>"; };
+		4CC577BF227B1B38001AC5B9 /* MovieSearchResultLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResultLayoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBBAE57225A72B200EBBC21 /* MovieSearchResultCell.swift */,
+				4CC577BF227B1B38001AC5B9 /* MovieSearchResultLayoutCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CBBAE83225A9B9800EBBC21 /* LoadingIndicator.swift in Sources */,
+				4CC577C0227B1B38001AC5B9 /* MovieSearchResultLayoutCell.swift in Sources */,
 				4CBBAE4F225A707F00EBBC21 /* MovieSearchPresenter.swift in Sources */,
 				4CBBAE7F225A958000EBBC21 /* MovieContentView.swift in Sources */,
 				4CBBAE8F225AA42E00EBBC21 /* MovieDetailModel.swift in Sources */,

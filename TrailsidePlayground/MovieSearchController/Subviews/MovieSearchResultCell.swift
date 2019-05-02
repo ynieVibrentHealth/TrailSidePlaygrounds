@@ -9,6 +9,8 @@
 import UIKit
 import SnapKit
 import Kingfisher
+import FlexLayout
+import PinLayout
 
 class MovieSearchResultCell:UITableViewCell {
     public static let REUSE_ID:String = "MovieSearchResultCellReuseId"

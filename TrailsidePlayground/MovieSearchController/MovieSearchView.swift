@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SnapKit
+import PinLayout
 import RxSwift
 import RxCocoa
 
@@ -33,7 +33,7 @@ class MovieSearchView: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .white
         tableView.allowsSelection = true
-        tableView.register(MovieSearchResultCell.self, forCellReuseIdentifier: MovieSearchResultCell.REUSE_ID)
+        tableView.register(MovieSearchResulLayouttCell.self, forCellReuseIdentifier: MovieSearchResulLayouttCell.REUSE_ID)
         self.view.addSubview(tableView)
         return tableView
     }()
@@ -94,21 +94,11 @@ class MovieSearchView: UIViewController {
         searchMovieObservable.onNext(true)
     }
     
-    override func viewWillLayoutSubviews() {
-        searchbar.snp.updateConstraints { (make) in
-            make.top.leading.trailing.equalTo(self.view)
-            make.height.equalTo(50)
-        }
-        
-        tableView.snp.updateConstraints { (make) in
-            make.leading.trailing.bottom.equalTo(self.view).priority(999)
-            make.bottom.equalTo(self.view).inset(view.safeAreaInsets.bottom)
-            make.top.equalTo(searchbar.snp.bottom)
-        }
-        
-        loadingIndicator.snp.updateConstraints { (make) in
-            make.edges.equalTo(tableView).priority(999)
-        }
+    override func viewDidLayoutSubviews() {
+        searchbar.pin.top().left().right().height(50)
+        tableView.pin.below(of: searchbar, aligned: .center).width(of: self.view).bottom()
+        loadingIndicator.pin.all()
+        super.viewDidLayoutSubviews()
     }
     
     private func refresh() {
@@ -142,7 +132,7 @@ extension MovieSearchView:UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieSearchResultCell.REUSE_ID, for: indexPath) as? MovieSearchResultCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieSearchResulLayouttCell.REUSE_ID, for: indexPath) as? MovieSearchResulLayouttCell else {return UITableViewCell()}
         let movieViewModel = movies[indexPath.row]
         cell.configure(with: movieViewModel)
         return cell
