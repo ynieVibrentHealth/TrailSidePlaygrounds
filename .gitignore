@@ -8,3 +8,7 @@ FlexLayoutSample/Pods/
 FlexLayoutSample/FlexLayoutSample.xcworkspace
 FlexLayoutSample/Podfile.lock
 FlexLayoutPlaygroundProject/Carthage/
+FlexLayoutPlaygroundProject/FlexLayoutPlayground.xcodeproj/xcuserdata/
+FlexLayoutPlaygroundProject/FlexLayoutPlayground.xcodeproj/project.xcworkspace/xcuserdata/
+FlexLayoutPlaygroundProject/.DS_Store
+.DS_Store

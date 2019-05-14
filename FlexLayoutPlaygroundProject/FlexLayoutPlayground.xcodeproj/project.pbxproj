@@ -13,6 +13,10 @@
 		4CA9173F228A0A9700E5907D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CA9173E228A0A9700E5907D /* Assets.xcassets */; };
 		4CA91742228A0A9700E5907D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA91740228A0A9700E5907D /* LaunchScreen.storyboard */; };
 		4CA9174D228A0A9700E5907D /* FlexLayoutPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9174C228A0A9700E5907D /* FlexLayoutPlaygroundTests.swift */; };
+		4CB1C7B8228ABD6C00CB5B9F /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB1C7B4228ABD6C00CB5B9F /* PinLayout.framework */; };
+		4CB1C7B9228ABD6C00CB5B9F /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB1C7B5228ABD6C00CB5B9F /* FlexLayout.framework */; };
+		4CB1C7BA228ABD6C00CB5B9F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB1C7B6228ABD6C00CB5B9F /* Result.framework */; };
+		4CB1C7BB228ABD6C00CB5B9F /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB1C7B7228ABD6C00CB5B9F /* ReactiveSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		4CA91748228A0A9700E5907D /* FlexLayoutPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA9174C228A0A9700E5907D /* FlexLayoutPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutPlaygroundTests.swift; sourceTree = "<group>"; };
 		4CA9174E228A0A9700E5907D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CB1C7B4228ABD6C00CB5B9F /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
+		4CB1C7B5228ABD6C00CB5B9F /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
+		4CB1C7B6228ABD6C00CB5B9F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		4CB1C7B7228ABD6C00CB5B9F /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB1C7B8228ABD6C00CB5B9F /* PinLayout.framework in Frameworks */,
+				4CB1C7B9228ABD6C00CB5B9F /* FlexLayout.framework in Frameworks */,
+				4CB1C7BA228ABD6C00CB5B9F /* Result.framework in Frameworks */,
+				4CB1C7BB228ABD6C00CB5B9F /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,7 @@
 				4CA91736228A0A9500E5907D /* FlexLayoutPlayground */,
 				4CA9174B228A0A9700E5907D /* FlexLayoutPlaygroundTests */,
 				4CA91735228A0A9500E5907D /* Products */,
+				4CB1C7B3228ABD6C00CB5B9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +109,17 @@
 			path = FlexLayoutPlaygroundTests;
 			sourceTree = "<group>";
 		};
+		4CB1C7B3228ABD6C00CB5B9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CB1C7B5228ABD6C00CB5B9F /* FlexLayout.framework */,
+				4CB1C7B4228ABD6C00CB5B9F /* PinLayout.framework */,
+				4CB1C7B7228ABD6C00CB5B9F /* ReactiveSwift.framework */,
+				4CB1C7B6228ABD6C00CB5B9F /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +129,7 @@
 			buildPhases = (
 				4CA91730228A0A9500E5907D /* Sources */,
 				4CA91731228A0A9500E5907D /* Frameworks */,
+				4CB1C7BC228ABD7800CB5B9F /* Carthage */,
 				4CA91732228A0A9500E5907D /* Resources */,
 			);
 			buildRules = (
@@ -191,6 +216,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CB1C7BC228ABD7800CB5B9F /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FlexLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PinLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FlexLayout.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PinLayout.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CA91730228A0A9500E5907D /* Sources */ = {
@@ -361,6 +415,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FlexLayoutPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +436,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FlexLayoutPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
