@@ -94,6 +94,13 @@ class MovieSearchView: UIViewController {
         searchMovieObservable.onNext(true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        searchbar.text = "ju"
+        self.searchText = "ju"
+        searchMovieObservable.onNext(true)
+    }
+    
     override func viewDidLayoutSubviews() {
         searchbar.pin.top().left().right().height(50)
         tableView.pin.below(of: searchbar, aligned: .center).width(of: self.view).bottom()

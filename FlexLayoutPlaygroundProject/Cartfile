@@ -1,0 +1,5 @@
+github "layoutBox/FlexLayout"
+
+github "layoutBox/PinLayout"
+
+github "ReactiveCocoa/ReactiveSwift" ~> 5.0

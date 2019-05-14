@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C5CBD04227644B80054B573 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5CBCF722763E390054B573 /* Alamofire.framework */; };
 		4C5CBD06227644B80054B573 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5CBCF822763E390054B573 /* Kingfisher.framework */; };
+		4CA917272289C3A600E5907D /* MovieDetailFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA917262289C3A600E5907D /* MovieDetailFlexView.swift */; };
+		4CA9172A2289C3CF00E5907D /* MovieContentFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA917292289C3CF00E5907D /* MovieContentFlexView.swift */; };
 		4CAE01102276474100F8F69B /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE010E2276474100F8F69B /* FlexLayout.framework */; };
 		4CAE01112276474100F8F69B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE010F2276474100F8F69B /* SnapKit.framework */; };
 		4CAE01142276474800F8F69B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE01122276474800F8F69B /* RxSwift.framework */; };
@@ -102,6 +104,8 @@
 /* Begin PBXFileReference section */
 		4C5CBCF722763E390054B573 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		4C5CBCF822763E390054B573 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		4CA917262289C3A600E5907D /* MovieDetailFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFlexView.swift; sourceTree = "<group>"; };
+		4CA917292289C3CF00E5907D /* MovieContentFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentFlexView.swift; sourceTree = "<group>"; };
 		4CAE01022276469000F8F69B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		4CAE01032276469000F8F69B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		4CAE01042276469000F8F69B /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FlexLayout.framework; sourceTree = "<group>"; };
@@ -198,6 +202,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CA917252289C38E00E5907D /* MovieDetailFlexController */ = {
+			isa = PBXGroup;
+			children = (
+				4CA917282289C3C100E5907D /* Subviews */,
+				4CA917262289C3A600E5907D /* MovieDetailFlexView.swift */,
+			);
+			path = MovieDetailFlexController;
+			sourceTree = "<group>";
+		};
+		4CA917282289C3C100E5907D /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				4CA917292289C3CF00E5907D /* MovieContentFlexView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		4CB687E822596D16007C1D86 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +250,7 @@
 		4CB687F322596D16007C1D86 /* TrailsidePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4CA917252289C38E00E5907D /* MovieDetailFlexController */,
 				4CBB30B02277392500439BE4 /* MenuView */,
 				4CBBAEA6225AD68C00EBBC21 /* FavoritesController */,
 				4CBBAE87225AA3E500EBBC21 /* MovieDetailController */,
@@ -591,6 +613,7 @@
 			files = (
 				4CBBAE83225A9B9800EBBC21 /* LoadingIndicator.swift in Sources */,
 				4CC577C0227B1B38001AC5B9 /* MovieSearchResultLayoutCell.swift in Sources */,
+				4CA917272289C3A600E5907D /* MovieDetailFlexView.swift in Sources */,
 				4CBBAE4F225A707F00EBBC21 /* MovieSearchPresenter.swift in Sources */,
 				4CBBAE7F225A958000EBBC21 /* MovieContentView.swift in Sources */,
 				4CBBAE8F225AA42E00EBBC21 /* MovieDetailModel.swift in Sources */,
@@ -614,6 +637,7 @@
 				4CBBAE55225A70BA00EBBC21 /* MovieSearchConfigurator.swift in Sources */,
 				4CBBAE9B225AB95D00EBBC21 /* MovieDetailConfigurator.swift in Sources */,
 				4CBBAE9D225ABB8500EBBC21 /* MovieDetailTwoButtonView.swift in Sources */,
+				4CA9172A2289C3CF00E5907D /* MovieContentFlexView.swift in Sources */,
 				4CBBAE53225A709700EBBC21 /* MovieSearchViewModel.swift in Sources */,
 				4CBBAE8D225AA42200EBBC21 /* MovieDetailPresenter.swift in Sources */,
 				4CBB30B22277393700439BE4 /* MenuView.swift in Sources */,
