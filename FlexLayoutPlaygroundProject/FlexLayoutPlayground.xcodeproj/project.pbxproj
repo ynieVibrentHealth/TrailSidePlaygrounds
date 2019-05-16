@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5E7462228DF78C0032EE0E /* ButtonSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E7461228DF78C0032EE0E /* ButtonSubview.swift */; };
 		4CA91738228A0A9500E5907D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA91737228A0A9500E5907D /* AppDelegate.swift */; };
 		4CA9173A228A0A9500E5907D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA91739228A0A9500E5907D /* ViewController.swift */; };
 		4CA9173D228A0A9500E5907D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA9173B228A0A9500E5907D /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C5E7461228DF78C0032EE0E /* ButtonSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSubview.swift; sourceTree = "<group>"; };
 		4CA91734228A0A9500E5907D /* FlexLayoutPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA91737228A0A9500E5907D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CA91739228A0A9500E5907D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C5E7463228DF7940032EE0E /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				4C5E7461228DF78C0032EE0E /* ButtonSubview.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		4CA9172B228A0A9500E5907D = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		4CA91736228A0A9500E5907D /* FlexLayoutPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4C5E7463228DF7940032EE0E /* Subview */,
 				4CA91737228A0A9500E5907D /* AppDelegate.swift */,
 				4CA91739228A0A9500E5907D /* ViewController.swift */,
 				4CA9173B228A0A9500E5907D /* Main.storyboard */,
@@ -252,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CA9173A228A0A9500E5907D /* ViewController.swift in Sources */,
+				4C5E7462228DF78C0032EE0E /* ButtonSubview.swift in Sources */,
 				4CA91738228A0A9500E5907D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
